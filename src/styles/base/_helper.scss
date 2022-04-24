@@ -1,0 +1,162 @@
+@use "./variables" as *;
+
+:root {
+  --color-green-primary: #{$green-primary};
+  --color-bg-main: #{$bg-main};
+}
+
+$colors: "green-primary", "bg-main";
+@each $color in $colors {
+  .text-#{$color},
+  .color-#{$color} {
+    color: var(--color-#{$color});
+  }
+  .bg-#{$color} {
+    background-color: var(--color-#{$color});
+  }
+}
+
+$textTranforms: "uppercase", "lowercase", "capitalize";
+@each $tt in $textTranforms {
+  .text-t-#{$tt} {
+    text-transform: var(--text-t-#{$tt});
+  }
+}
+
+$fontSizes: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30;
+@each $size in $fontSizes {
+  .font-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+
+$fontWeights: 400, 600, 700;
+@each $weight in $fontWeights {
+  .font-w-#{$weight} {
+    font-weight: $weight;
+  }
+}
+
+$spacings: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30;
+@each $space in $spacings {
+  .m-#{$space} {
+    margin: #{$space}px;
+  }
+  .my-#{$space} {
+    margin-top: #{$space}px;
+    margin-bottom: #{$space}px;
+  }
+  .mx-#{$space} {
+    margin-left: #{$space}px;
+    margin-right: #{$space}px;
+  }
+  .mb-#{$space} {
+    margin-bottom: #{$space}px;
+  }
+  .mt-#{$space} {
+    margin-top: #{$space}px;
+  }
+  .ml-#{$space} {
+    margin-left: #{$space}px;
+  }
+  .mr-#{$space} {
+    margin-right: #{$space}px;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}px;
+  }
+  .py-#{$space} {
+    padding-top: #{$space}px;
+    padding-bottom: #{$space}px;
+  }
+  .px-#{$space} {
+    padding-left: #{$space}px;
+    padding-right: #{$space}px;
+  }
+  .pb-#{$space} {
+    padding-bottom: #{$space}px;
+  }
+  .pt-#{$space} {
+    padding-top: #{$space}px;
+  }
+  .pl-#{$space} {
+    padding-left: #{$space}px;
+  }
+  .pr-#{$space} {
+    padding-right: #{$space}px;
+  }
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.pt-auto {
+  padding-top: auto;
+}
+
+.pb-auto {
+  padding-bottom: auto;
+}
+
+.pl-auto {
+  padding-left: auto;
+}
+
+.pr-auto {
+  padding-right: auto;
+}
+
+$borderRadius: 8, 16;
+@each $br in $borderRadius {
+  .radius-#{$br} {
+    border-radius: #{$br};
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}

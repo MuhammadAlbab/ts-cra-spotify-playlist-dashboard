@@ -1,0 +1,48 @@
+@use "./base/index" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background: $bg-main;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: #111;
+  &-track {
+    background-color: #333;
+    border-radius: 10px;
+    padding-bottom: 50px !important;
+  }
+  &-thumb {
+    background: $green-primary;
+    border-radius: 10px;
+  }
+}
+
+.link {
+  background: #333;
+  box-shadow: 1px 1px 1px 1px #121212;
+}
+
+.link a:hover {
+  border-left: 3px solid $green-primary !important;
+  background-color: #222 !important;
+}
+
+.link a:focus {
+  background: #222 !important;
+}
